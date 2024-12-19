@@ -1,5 +1,4 @@
-import YelpLogo from './YelpLogo'
-import Image from 'next/image'
+import Image from 'next/image';
 
 export default function Hero() {
 	return (
@@ -30,24 +29,9 @@ export default function Hero() {
 					</h1>
 
 					{/* Подзаголовок */}
-					<p className="text-lg sm:text-xl md:text-2xl mb-8 sm:mb-12 text-blue-100 leading-relaxed opacity-90 animate-slide-up max-w-3xl mx-auto">
-						Tap into the unmatched potential of Yelp's advertising ecosystem to draw in precisely targeted, high-value leads. By collaborating with CalleAgleDigi, you'll transform your Yelp presence into a magnet for serious prospects, elevating your online visibility and converting casual browsers into devoted patrons.
+					<p className="text-xl sm:text-2xl text-blue-100 mb-8 animate-fade-in-up">
+						Don&apos;t just compete &mdash; dominate your local market with Yelp&apos;s powerful advertising platform
 					</p>
-
-					{/* Кнопка */}
-					<div className="flex justify-center">
-						<button className="bg-white text-blue-600 px-8 sm:px-10 py-3 sm:py-4 rounded-full font-semibold 
-									   hover:bg-blue-50 transition-all transform hover:scale-105 hover:-translate-y-1
-									   shadow-lg hover:shadow-xl animate-fade-in-left
-									   focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-50">
-							<span className="flex items-center justify-center">
-								<span>Start Today</span>
-								<svg className="w-5 h-5 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-									<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-								</svg>
-							</span>
-						</button>
-					</div>
 				</div>
 			</div>
 
