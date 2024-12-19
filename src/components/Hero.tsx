@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import YelpLogo from './YelpLogo'
 
 export default function Hero() {
 	return (
@@ -11,13 +11,10 @@ export default function Hero() {
 				<div className="text-center max-w-4xl mx-auto">
 					{/* Логотип */}
 					<div className="inline-block mb-8 animate-bounce-slow hover:animate-pulse-slow transition-all duration-300 transform hover:scale-110">
-						<Image
+						<img
 							src="/images/yelp-logo.png"
 							alt="Yelp"
-							width={80}
-							height={80}
-							className="filter drop-shadow-lg"
-							priority
+							className="h-12 sm:h-16 md:h-20 filter drop-shadow-lg"
 						/>
 					</div>
 
@@ -31,7 +28,7 @@ export default function Hero() {
 
 					{/* Подзаголовок */}
 					<p className="text-lg sm:text-xl md:text-2xl mb-8 sm:mb-12 text-blue-100 leading-relaxed opacity-90 animate-slide-up max-w-3xl mx-auto">
-						Tap into the unmatched potential of Yelp&apos;s advertising ecosystem to draw in precisely targeted, high-value leads. By collaborating with CalleAgleDigi, you&apos;ll transform your Yelp presence into a magnet for serious prospects, elevating your online visibility and converting casual browsers into devoted patrons.
+						Tap into the unmatched potential of Yelp's advertising ecosystem to draw in precisely targeted, high-value leads. By collaborating with Call Eagle Digital, you'll transform your Yelp presence into a magnet for serious prospects, elevating your online visibility and converting casual browsers into devoted patrons.
 					</p>
 
 					{/* Кнопка */}

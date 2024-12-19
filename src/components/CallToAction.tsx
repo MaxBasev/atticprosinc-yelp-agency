@@ -23,7 +23,7 @@ export default function CallToAction() {
 						Your Next Customers Are On Yelp
 					</h2>
 					<p className="text-blue-100 text-lg md:text-xl mb-12">
-						A meticulously optimized Yelp profile can draw in a steady stream of prospects, converting them into satisfied clients. Discover how effortless it is to transform curiosity into revenue. With CalleAgleDigi, turn your Yelp presence into a powerful growth engine.
+						A meticulously optimized Yelp profile can draw in a steady stream of prospects, converting them into satisfied clients. Discover how effortless it is to transform curiosity into revenue. With Call Eagle Digital, turn your Yelp presence into a powerful growth engine.
 					</p>
 					<button className="bg-white text-blue-600 px-8 py-4 rounded-full font-semibold hover:bg-blue-50 transition-all transform hover:scale-105 hover:-translate-y-1 shadow-lg hover:shadow-xl">
 						Start Your Optimization Journey

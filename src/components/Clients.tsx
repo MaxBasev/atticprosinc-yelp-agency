@@ -3,25 +3,25 @@ import Image from 'next/image';
 export default function Clients() {
 	const clients = [
 		{
-			name: 'Restaurant Success',
+			name: 'Home Wizards',
 			logo: '/images/clients/restaurant.png',
-			industry: 'Fine Dining Restaurant',
+			industry: 'Home Improvement',
 			rating: 4.8,
 			testimonial: 'Increased our customer base by 150% in just 3 months',
 			gradient: 'from-blue-600 to-purple-600'
 		},
 		{
-			name: 'Auto Excellence',
+			name: 'Attic Pros Inc',
 			logo: '/images/clients/auto.png',
-			industry: 'Auto Service Center',
+			industry: 'Attic Services',
 			rating: 4.9,
 			testimonial: 'Generated 200+ qualified leads through Yelp optimization',
 			gradient: 'from-purple-600 to-pink-600'
 		},
 		{
-			name: 'Beauty & Beyond',
+			name: 'HVAC Panda',
 			logo: '/images/clients/beauty.png',
-			industry: 'Premium Beauty Salon',
+			industry: 'HVAC Services',
 			rating: 5.0,
 			testimonial: 'ROI increased by 300% within first 6 months',
 			gradient: 'from-pink-600 to-blue-600'
