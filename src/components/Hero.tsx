@@ -31,7 +31,7 @@ export default function Hero() {
 
 					{/* Подзаголовок */}
 					<p className="text-lg sm:text-xl md:text-2xl mb-8 sm:mb-12 text-blue-100 leading-relaxed opacity-90 animate-slide-up max-w-3xl mx-auto">
-						Tap into the unmatched potential of Yelp's advertising ecosystem to draw in precisely targeted, high-value leads. By collaborating with CalleAgleDigi, you'll transform your Yelp presence into a magnet for serious prospects, elevating your online visibility and converting casual browsers into devoted patrons.
+						Tap into the unmatched potential of Yelp&apos;s advertising ecosystem to draw in precisely targeted, high-value leads. By collaborating with CalleAgleDigi, you&apos;ll transform your Yelp presence into a magnet for serious prospects, elevating your online visibility and converting casual browsers into devoted patrons.
 					</p>
 
 					{/* Кнопка */}
