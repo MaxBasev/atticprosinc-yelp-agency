@@ -14,7 +14,7 @@ export default function ContactForm() {
 							Get Started Today
 						</h2>
 						<p className="text-gray-600 text-center mb-12">
-							Fill out the form below and we'll get back to you within 24 hours
+							Fill out the form below and we&apos;ll get back to you within 24 hours
 						</p>
 
 						<form className="space-y-6">

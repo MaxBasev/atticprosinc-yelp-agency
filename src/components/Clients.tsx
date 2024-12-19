@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 export default function Clients() {
 	const clients = [
 		{
@@ -62,9 +64,11 @@ export default function Clients() {
 								<div className="relative">
 									{/* Логотип */}
 									<div className="h-16 mb-8 flex items-center justify-center">
-										<img
+										<Image
 											src={client.logo}
 											alt={client.name}
+											width={160}
+											height={64}
 											className="max-h-full max-w-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-500"
 										/>
 									</div>
@@ -82,7 +86,7 @@ export default function Clients() {
 										{client.industry}
 									</h3>
 									<p className="text-gray-600 text-center leading-relaxed italic">
-										"{client.testimonial}"
+										&quot;{client.testimonial}&quot;
 									</p>
 
 									{/* Декоративная линия */}

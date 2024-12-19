@@ -1,4 +1,5 @@
 import YelpLogo from './YelpLogo'
+import Image from 'next/image'
 
 export default function Hero() {
 	return (
@@ -11,10 +12,12 @@ export default function Hero() {
 				<div className="text-center max-w-4xl mx-auto">
 					{/* Логотип */}
 					<div className="inline-block mb-8 animate-bounce-slow hover:animate-pulse-slow transition-all duration-300 transform hover:scale-110">
-						<img
+						<Image
 							src="/images/yelp-logo.png"
 							alt="Yelp"
-							className="h-12 sm:h-16 md:h-20 filter drop-shadow-lg"
+							width={80}
+							height={80}
+							className="filter drop-shadow-lg"
 						/>
 					</div>
 

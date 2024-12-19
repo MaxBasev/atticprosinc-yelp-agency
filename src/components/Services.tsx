@@ -31,7 +31,7 @@ export default function Services() {
 							Our Full Range of Yelp Services
 						</h2>
 						<p className="text-gray-600 text-lg md:text-xl">
-							We understand the intensity of today's competition. That's why we've built an arsenal of advanced solutions to help you convert more leads and maintain a strong edge in your market.
+							We understand today&apos;s competition intensity. That&apos;s why we&apos;ve built an arsenal of advanced solutions to help you convert more leads and maintain a strong edge in your market.
 						</p>
 					</div>
 

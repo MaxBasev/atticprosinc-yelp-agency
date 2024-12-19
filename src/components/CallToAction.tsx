@@ -1,12 +1,16 @@
+import Image from 'next/image';
+
 export default function CallToAction() {
 	return (
 		<section className="py-16 relative overflow-hidden">
 			{/* Фоновое изображение */}
 			<div className="absolute inset-0">
-				<img
+				<Image
 					src="/images/service-bg.jpg"
 					alt="Background"
-					className="w-full h-full object-cover opacity-10"
+					layout="fill"
+					objectFit="cover"
+					className="opacity-10"
 				/>
 			</div>
 

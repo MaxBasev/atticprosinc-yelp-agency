@@ -35,7 +35,7 @@ export default function Features() {
 							Increase Customer Trust
 						</h2>
 						<p className="text-gray-600 text-lg md:text-xl">
-							Lean into Yelp's credibility to highlight what sets you apart. By using Yelp's precise targeting options, you connect with a receptive audience in your area—an audience ready to appreciate your offerings and become loyal clients.
+							Lean into Yelp&apos;s credibility to highlight what sets you apart. By using Yelp&apos;s precise targeting options, you connect with a receptive audience in your area&mdash;an audience ready to appreciate your offerings and become loyal clients.
 						</p>
 					</div>
 
