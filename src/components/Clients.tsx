@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import Image from 'next/image';
 
 export default function Clients() {
@@ -5,6 +6,7 @@ export default function Clients() {
 		{
 			name: 'Home Wizards',
 			logo: '/images/clients/homewizards.png',
+			website: 'https://homewizards.com',
 			industry: 'Home Improvement',
 			rating: 4.8,
 			testimonial: 'Increased our customer base by 150% in just 3 months',
@@ -13,6 +15,7 @@ export default function Clients() {
 		{
 			name: 'Attic Pros Inc',
 			logo: '/images/clients/atticpros.png',
+			website: 'https://atticprosinc.com',
 			industry: 'Attic Services',
 			rating: 4.9,
 			testimonial: 'Generated 200+ qualified leads through Yelp optimization',
@@ -21,6 +24,7 @@ export default function Clients() {
 		{
 			name: 'HVAC Panda',
 			logo: '/images/clients/hvacpanda.png',
+			website: 'https://hvacpanda.com',
 			industry: 'HVAC Services',
 			rating: 5.0,
 			testimonial: 'ROI increased by 300% within first 6 months',
@@ -64,13 +68,20 @@ export default function Clients() {
 								<div className="relative">
 									{/* Логотип */}
 									<div className="h-16 mb-8 flex items-center justify-center">
-										<Image
-											src={client.logo}
-											alt={client.name}
-											width={160}
-											height={64}
-											className="max-h-full max-w-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-500"
-										/>
+										<Link
+											href={client.website}
+											target="_blank"
+											rel="noopener noreferrer"
+											className="cursor-pointer transition-transform duration-300 hover:scale-110"
+										>
+											<Image
+												src={client.logo}
+												alt={client.name}
+												width={160}
+												height={64}
+												className="max-h-full max-w-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-500"
+											/>
+										</Link>
 									</div>
 
 									{/* Рейтинг */}
