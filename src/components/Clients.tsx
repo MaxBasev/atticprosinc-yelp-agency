@@ -4,7 +4,7 @@ export default function Clients() {
 	const clients = [
 		{
 			name: 'Home Wizards',
-			logo: '/images/clients/restaurant.png',
+			logo: '/images/clients/homewizards.png',
 			industry: 'Home Improvement',
 			rating: 4.8,
 			testimonial: 'Increased our customer base by 150% in just 3 months',
@@ -12,7 +12,7 @@ export default function Clients() {
 		},
 		{
 			name: 'Attic Pros Inc',
-			logo: '/images/clients/auto.png',
+			logo: '/images/clients/atticpros.png',
 			industry: 'Attic Services',
 			rating: 4.9,
 			testimonial: 'Generated 200+ qualified leads through Yelp optimization',
@@ -20,7 +20,7 @@ export default function Clients() {
 		},
 		{
 			name: 'HVAC Panda',
-			logo: '/images/clients/beauty.png',
+			logo: '/images/clients/hvacpanda.png',
 			industry: 'HVAC Services',
 			rating: 5.0,
 			testimonial: 'ROI increased by 300% within first 6 months',
