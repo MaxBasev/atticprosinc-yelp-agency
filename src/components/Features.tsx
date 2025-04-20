@@ -1,20 +1,20 @@
 export default function Features() {
 	const features = [
 		{
-			title: "Business Highlights",
-			description: "Expertly crafted highlights can win over new customers and reassure existing ones. We transform your Yelp listing into a persuasive selling tool, weaving in engaging phrases that underscore your unique strengths. Distinguish yourself from competitors and forge immediate trust.",
+			title: "Building Trust with Prospects",
+			description: "Gain trust by showing off what makes your business shine. From compelling highlights to real client success stories, we tailor every detail to resonate with your audience.",
 			icon: "✨",
 			gradient: "from-blue-600 to-purple-600"
 		},
 		{
-			title: "Imagery",
-			description: "Captivate potential customers with visuals that resonate. Our design specialists create impactful, brand-centric imagery that sparks curiosity. By visually showcasing your company's personality, you inspire users to stay and learn more.",
+			title: "Visual Impact",
+			description: "Powerful visuals elevate your listing and reinforce your brand identity. Our design team ensures every image draws users in and strengthens your message.",
 			icon: "🎨",
 			gradient: "from-purple-600 to-pink-600"
 		},
 		{
-			title: "Portfolios",
-			description: "Show off the quality and creativity behind your services. For businesses that thrive on visual proof, Yelp's portfolio feature is a game-changer. We'll help you curate your best examples so prospects can immediately understand the value and caliber of your work.",
+			title: "Portfolio & Showcase",
+			description: "Need to show craftsmanship, creativity, or impact? Our portfolio tools help you present your best work with clarity and confidence — perfect for visual industries.",
 			icon: "📁",
 			gradient: "from-pink-600 to-blue-600"
 		}
@@ -32,10 +32,10 @@ export default function Features() {
 				<div className="container mx-auto px-4 relative z-30">
 					<div className="max-w-3xl mx-auto text-center mb-16">
 						<h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-							Increase Customer Trust
+							Boost Credibility with Targeted Enhancements
 						</h2>
 						<p className="text-gray-600 text-lg md:text-xl">
-							Lean into Yelp&apos;s credibility to highlight what sets you apart. By using Yelp&apos;s precise targeting options, you connect with a receptive audience in your area&mdash;an audience ready to appreciate your offerings and become loyal clients.
+							Gain trust by showing off what makes your business shine. From compelling highlights to real client success stories, we tailor every detail to resonate with your audience.
 						</p>
 					</div>
 

@@ -1,32 +1,32 @@
 export default function Process() {
 	const steps = [
 		{
-			title: "Profile Audit",
-			description: "First, we conduct a thorough review of your existing Yelp presence. We examine reviews, images, and business data to pinpoint areas that need attention. This detailed evaluation lays the groundwork for a stronger, more compelling profile.",
+			title: "Full Profile Audit",
+			description: "We begin by analyzing your business listing, assessing reviews, media, and content to identify improvement areas and opportunities.",
 			icon: "🔍",
 			gradient: "from-blue-600 to-purple-600"
 		},
 		{
-			title: "Profile Setup & Enhancement",
-			description: "Whether you're starting from scratch or refining an established listing, we ensure your profile is fully optimized. We update key details, add high-quality imagery, and refine your business information to capture more interest and encourage customer trust.",
+			title: "Setup & Enhancement",
+			description: "Need a fresh start or a stronger profile? We update your information, polish your visuals, and make sure every section tells your story effectively.",
 			icon: "⚡",
 			gradient: "from-purple-600 to-pink-600"
 		},
 		{
-			title: "Keyword Optimization",
-			description: "Through comprehensive keyword research tailored to your industry and location, we strategically integrate these terms into your Yelp profile. This targeted approach makes it easier for the right customers to find you when they need your services.",
+			title: "Keyword Integration",
+			description: "We research industry-relevant keywords for your services and location, then apply them strategically to boost discoverability and search visibility.",
 			icon: "🎯",
 			gradient: "from-pink-600 to-red-600"
 		},
 		{
-			title: "Ads Setup & Management",
-			description: "We leverage Yelp's advertising platform to craft campaigns aimed directly at ready-to-convert local audiences. By managing your ad spend and fine-tuning your messaging, we drive meaningful traffic that translates into loyal customers.",
+			title: "Smart Ads Management",
+			description: "We create and manage advertising campaigns designed to capture the attention of ready-to-convert local customers — with efficient budget control and continuous performance improvements.",
 			icon: "📈",
 			gradient: "from-red-600 to-orange-600"
 		},
 		{
-			title: "Performance Monitoring & Ongoing Optimization",
-			description: "We don't stop once your profile is live. Yelp's environment evolves, and so do we. Our team regularly reviews performance metrics, uncovers trends, and adjusts strategies to boost results. We keep you informed with periodic reports so you can track your growth and ROI.",
+			title: "Performance Monitoring",
+			description: "Ongoing performance tracking helps us refine your profile regularly, ensuring long-term visibility and consistent lead generation.",
 			icon: "📊",
 			gradient: "from-orange-600 to-yellow-600"
 		}
@@ -44,7 +44,7 @@ export default function Process() {
 				<div className="container mx-auto px-4 relative z-30">
 					<div className="max-w-3xl mx-auto text-center mb-16">
 						<h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-							Our Yelp Optimization Process
+							How We Optimize Your Local Listings
 						</h2>
 					</div>
 

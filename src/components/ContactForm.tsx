@@ -1,7 +1,7 @@
 export default function ContactForm() {
 	return (
 		<section className="py-32 bg-gray-50 relative overflow-hidden">
-			{/* Декоративный фон */}
+			{/* Decorative background */}
 			<div className="absolute inset-0">
 				<div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-white to-transparent" />
 				<div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white to-transparent" />
@@ -11,20 +11,20 @@ export default function ContactForm() {
 				<div className="max-w-3xl mx-auto">
 					<div className="bg-white rounded-2xl shadow-xl p-8 md:p-12 animate-fade-in-up">
 						<h2 className="text-3xl md:text-4xl font-bold text-center mb-2 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-							Get Started Today
+							Contact Form
 						</h2>
 						<p className="text-gray-600 text-center mb-12">
-							Fill out the form below and we&apos;ll get back to you within 24 hours
+							Fill out the form below and we&apos;ll get back to you
 						</p>
 
 						<form className="space-y-6">
 							<div className="grid md:grid-cols-2 gap-6">
 								{[
-									{ name: 'fullName', type: 'text', placeholder: 'Full Name', icon: 'user' },
+									{ name: 'name', type: 'text', placeholder: 'Name', icon: 'user' },
 									{ name: 'phone', type: 'tel', placeholder: 'Phone', icon: 'phone' },
 									{ name: 'email', type: 'email', placeholder: 'Email', icon: 'mail' },
 									{ name: 'city', type: 'text', placeholder: 'City', icon: 'map' },
-									{ name: 'company', type: 'text', placeholder: 'Company Name', icon: 'building' },
+									{ name: 'company', type: 'text', placeholder: 'Company', icon: 'building' },
 									{ name: 'website', type: 'url', placeholder: 'Website', icon: 'globe' },
 								].map((field, index) => (
 									<div key={field.name} className="relative group animate-fade-in-up" style={{ animationDelay: `${index * 100}ms` }}>
@@ -46,8 +46,7 @@ export default function ContactForm() {
 									className="mt-1 h-5 w-5 rounded border-gray-300 text-blue-600 focus:ring-blue-500 transition-colors"
 								/>
 								<label className="text-sm text-gray-600">
-									I agree to receive text messages from CalleAgleDigi at the phone number provided.
-									Consent is not a condition of purchase.
+									I consent to receive SMS/calls about services from Call Eagle Digital.
 								</label>
 							</div>
 
