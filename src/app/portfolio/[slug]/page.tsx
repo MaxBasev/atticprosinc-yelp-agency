@@ -2,9 +2,9 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 
 interface PageProps {
-	params: {
+	params: Promise<{
 		slug: string;
-	};
+	}>;
 }
 
 interface CaseStudyData {
@@ -17,8 +17,8 @@ interface CaseStudyData {
 	results: string[];
 }
 
-export default function CaseStudyPage({ params }: PageProps) {
-	const { slug } = params;
+export default async function CaseStudyPage({ params }: PageProps) {
+	const { slug } = await params;
 
 	// Portfolio data - in production this would come from a database or CMS
 	const portfolioData: { [key: string]: CaseStudyData } = {

@@ -117,6 +117,9 @@ export default function AboutPage() {
 								<p>
 									Since 2018, we&apos;ve been dedicated to demystifying digital marketing for local businesses. We understand that running a business is challenging enough without having to worry about complex advertising platforms and ever-changing algorithms. That&apos;s why we handle the technical aspects while you focus on what you do best – serving your customers and growing your business.
 								</p>
+								<p className="mt-6">
+									Our dev team is ready to integrate <strong>Yelp Partner APIs</strong> for automated lead routing and attribution, ensuring seamless data flow between Yelp Ads and your CRM.
+								</p>
 							</div>
 						</div>
 					</div>

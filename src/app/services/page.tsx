@@ -1,5 +1,59 @@
 import Link from 'next/link';
 import Head from 'next/head';
+import Script from 'next/script';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+	title: "Yelp Advertising & Local SEO Agency | Call Eagle Digital"
+};
+
+function YelpPartnerBenefits() {
+	return (
+		<div className="mt-16 rounded-2xl bg-white border border-gray-100 p-8 shadow-lg">
+			<h2 className="text-3xl md:text-4xl font-bold mb-6 text-center bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+				Why Partner with Us on Yelp
+			</h2>
+			<p className="mb-8 text-center max-w-2xl mx-auto text-gray-600 text-lg">
+				As a soon-to-be certified <strong className="text-blue-600">Yelp Advertising Partner</strong>, we unlock exclusive marketing perks you can&apos;t get anywhere else.
+			</p>
+			<ul className="grid gap-8 md:grid-cols-3 max-w-6xl mx-auto">
+				<li className="flex items-start gap-4 group">
+					<span className="text-3xl transform group-hover:scale-110 transition-transform duration-300">💳</span>
+					<div>
+						<h3 className="font-semibold text-xl mb-2 text-gray-900 group-hover:text-blue-600 transition-colors duration-300">
+							Ad-Credits
+						</h3>
+						<p className="text-gray-600 leading-relaxed">
+							Receive bonus credits to jump-start campaigns on Yelp Ads.
+						</p>
+					</div>
+				</li>
+				<li className="flex items-start gap-4 group">
+					<span className="text-3xl transform group-hover:scale-110 transition-transform duration-300">🎁</span>
+					<div>
+						<h3 className="font-semibold text-xl mb-2 text-gray-900 group-hover:text-blue-600 transition-colors duration-300">
+							Bundled Plans
+						</h3>
+						<p className="text-gray-600 leading-relaxed">
+							Combine Yelp Ads with SEO & PPC for up to 25% lower blended CPL.
+						</p>
+					</div>
+				</li>
+				<li className="flex items-start gap-4 group">
+					<span className="text-3xl transform group-hover:scale-110 transition-transform duration-300">⚡</span>
+					<div>
+						<h3 className="font-semibold text-xl mb-2 text-gray-900 group-hover:text-blue-600 transition-colors duration-300">
+							Priority Support
+						</h3>
+						<p className="text-gray-600 leading-relaxed">
+							Direct access to Yelp Partner Managers for faster issue resolution.
+						</p>
+					</div>
+				</li>
+			</ul>
+		</div>
+	);
+}
 
 export default function ServicesPage() {
 	const services = [
@@ -47,6 +101,18 @@ export default function ServicesPage() {
 		}
 	];
 
+	const serviceSchema = {
+		"@context": "https://schema.org",
+		"@type": "Service",
+		"serviceType": "Yelp Ads Management",
+		"provider": {
+			"@type": "Organization",
+			"name": "Call Eagle Digital",
+			"url": "https://calleagledigital.com"
+		},
+		"areaServed": { "@type": "Country", "name": "United States" }
+	};
+
 	return (
 		<>
 			<Head>
@@ -56,12 +122,20 @@ export default function ServicesPage() {
 				/>
 			</Head>
 
+			<Script
+				id="yelp-service"
+				type="application/ld+json"
+				dangerouslySetInnerHTML={{
+					__html: JSON.stringify(serviceSchema),
+				}}
+			/>
+
 			<div className="min-h-screen">
 				{/* Hero Section */}
 				<section className="bg-gradient-to-r from-blue-600 via-blue-700 to-purple-700 py-20">
 					<div className="container mx-auto px-4 text-center">
 						<h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-							Our Services
+							Yelp Advertising & Local SEO Agency
 						</h1>
 						<p className="text-xl text-blue-100 max-w-3xl mx-auto">
 							Comprehensive digital marketing solutions designed to help your local business thrive in today&apos;s competitive landscape.
@@ -114,6 +188,13 @@ export default function ServicesPage() {
 								</div>
 							))}
 						</div>
+					</div>
+				</section>
+
+				{/* Yelp Partner Benefits Section */}
+				<section className="py-20 bg-gray-50">
+					<div className="container mx-auto px-4">
+						<YelpPartnerBenefits />
 					</div>
 				</section>
 
