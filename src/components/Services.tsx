@@ -1,16 +1,24 @@
+import Link from 'next/link';
+
 export default function Services() {
 	const services = [
 		{
-			title: "Instant Lead Response System",
-			description: "When potential clients reach out, response speed is crucial. Our advanced autoresponder delivers fast, personalized replies — building trust, showing professionalism, and securing more appointments.",
-			icon: "⚡",
+			title: "Google Local Services Ads",
+			description: "Get featured at the top of Google for local service searches. Our certified approach includes profile verification, review optimization, and lead management to help you win more local customers through Google's trusted platform.",
+			icon: "📍",
 			gradient: "from-blue-600 to-purple-600"
 		},
 		{
-			title: "Your Remote Team for Day-to-Day Tasks",
-			description: "From follow-ups and scheduling to client communications, our experienced virtual assistants handle it all. Focus on growth while we take care of the details behind the scenes.",
-			icon: "👩‍💼",
+			title: "SEO (Local & Technical)",
+			description: "Dominate local search results with proven SEO strategies. Comprehensive local SEO optimization including Google My Business enhancement, local citation building, schema markup implementation, and technical website improvements.",
+			icon: "🔍",
 			gradient: "from-purple-600 to-pink-600"
+		},
+		{
+			title: "PPC Campaigns (Google/Bing)",
+			description: "High-converting paid search campaigns across major platforms. Strategic pay-per-click advertising with compelling ad copy, optimized landing pages, and continuous performance monitoring to maximize your advertising investment.",
+			icon: "💡",
+			gradient: "from-pink-600 to-orange-600"
 		}
 	]
 
@@ -28,15 +36,15 @@ export default function Services() {
 					{/* Section heading */}
 					<div className="max-w-3xl mx-auto text-center mb-16">
 						<h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-							Unlock the Power of Local Digital Marketing
+							Core Digital Marketing Services
 						</h2>
 						<p className="text-gray-600 text-lg md:text-xl">
-							We equip your business with smart, effective tools tailored to win attention and convert leads in a competitive environment.
+							Our flagship services designed to maximize your local business visibility and drive qualified leads through proven digital strategies.
 						</p>
 					</div>
 
 					{/* Service cards */}
-					<div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+					<div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
 						{services.map((service, index) => (
 							<div
 								key={index}
@@ -64,6 +72,19 @@ export default function Services() {
 								</div>
 							</div>
 						))}
+					</div>
+
+					{/* See All Services Button */}
+					<div className="text-center mt-12">
+						<Link
+							href="/services"
+							className="inline-flex items-center bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-full font-semibold hover:from-blue-700 hover:to-purple-700 transition-all transform hover:scale-105 hover:-translate-y-1 shadow-lg hover:shadow-xl"
+						>
+							<span>See All Services</span>
+							<svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+							</svg>
+						</Link>
 					</div>
 				</div>
 			</div>

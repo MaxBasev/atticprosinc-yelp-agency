@@ -29,6 +29,11 @@ export default function Hero() {
 						</span>
 					</h1>
 
+					{/* Yelp Partnership Notice */}
+					<p className="text-sm text-white/80 mt-2">
+						Soon to be an official Yelp Advertising Partner — stay tuned!
+					</p>
+
 					{/* Subheadline */}
 					<p className="text-lg sm:text-xl md:text-2xl mb-8 sm:mb-12 text-blue-100 leading-relaxed opacity-90 animate-slide-up max-w-3xl mx-auto">
 						Data-driven, cost-efficient, and results-oriented — our advertising solutions help you attract qualified local leads and boost your brand presence. With Call Eagle Digital, your business stands out where it matters most.
