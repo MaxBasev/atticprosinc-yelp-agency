@@ -1,30 +1,28 @@
 'use client';
 
-import { useState } from 'react';
+import { PhoneIcon, EnvelopeIcon, MapPinIcon } from '@heroicons/react/24/outline';
 
 export default function ContactForm() {
-	const [isConsentChecked, setIsConsentChecked] = useState(false);
-	const [isSubmitting, setIsSubmitting] = useState(false);
-
-	const handleSubmit = async (e: React.FormEvent) => {
-		e.preventDefault();
-
-		if (!isConsentChecked) {
-			alert('Please check the consent checkbox to proceed.');
-			return;
+	const contactInfo = [
+		{
+			icon: PhoneIcon,
+			label: "Phone",
+			value: "+1 (415) 555-0123",
+			href: "tel:+14155550123"
+		},
+		{
+			icon: EnvelopeIcon,
+			label: "Email",
+			value: "hello@calleagledigital.com",
+			href: "mailto:hello@calleagledigital.com"
+		},
+		{
+			icon: MapPinIcon,
+			label: "Address",
+			value: "548 Market St, San Francisco, CA",
+			href: "https://maps.google.com/?q=548+Market+St,+San+Francisco,+CA"
 		}
-
-		setIsSubmitting(true);
-
-		// Simulate form submission
-		setTimeout(() => {
-			setIsSubmitting(false);
-			alert('Thanks! We\'ll reach out within 1 business day.');
-			// Reset form
-			(e.target as HTMLFormElement).reset();
-			setIsConsentChecked(false);
-		}, 1000);
-	};
+	];
 
 	return (
 		<section id="contact" className="py-32 bg-gray-50 relative overflow-hidden">
@@ -38,74 +36,42 @@ export default function ContactForm() {
 				<div className="max-w-3xl mx-auto">
 					<div className="bg-white rounded-2xl shadow-xl p-8 md:p-12 animate-fade-in-up">
 						<h2 className="text-3xl md:text-4xl font-bold text-center mb-2 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-							Contact Form
+							Contact Us
 						</h2>
 						<p className="text-gray-600 text-center mb-12">
-							Fill out the form below and we&apos;ll get back to you
+							Get in touch with us through any of these channels
 						</p>
 
-						<form className="space-y-6" onSubmit={handleSubmit}>
-							<div className="grid md:grid-cols-2 gap-6">
-								{[
-									{ name: 'name', type: 'text', placeholder: 'Name', icon: 'user', required: true },
-									{ name: 'phone', type: 'tel', placeholder: 'Phone', icon: 'phone', required: true },
-									{ name: 'email', type: 'email', placeholder: 'Email', icon: 'envelope', required: true },
-									{ name: 'city', type: 'text', placeholder: 'City', icon: 'map', required: false },
-									{ name: 'company', type: 'text', placeholder: 'Company', icon: 'building', required: false },
-									{ name: 'website', type: 'url', placeholder: 'Website', icon: 'globe', required: false },
-								].map((field, index) => (
-									<div key={field.name} className="relative group animate-fade-in-up" style={{ animationDelay: `${index * 100}ms` }}>
-										<div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-gray-400 group-focus-within:text-blue-600 transition-colors">
-											<i className={`fas fa-${field.icon}`}></i>
-										</div>
-										<input
-											type={field.type}
-											name={field.name}
-											placeholder={field.placeholder}
-											required={field.required}
-											className="w-full pl-10 pr-4 py-3 rounded-lg border border-gray-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all outline-none"
-										/>
+						<div className="grid md:grid-cols-3 gap-8">
+							{contactInfo.map((contact, index) => (
+								<a
+									key={index}
+									href={contact.href}
+									className="group flex flex-col items-center p-6 rounded-xl hover:bg-gray-50 transition-all duration-300"
+									target={contact.icon === MapPinIcon ? "_blank" : undefined}
+									rel={contact.icon === MapPinIcon ? "noopener noreferrer" : undefined}
+								>
+									<div className="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center mb-4 group-hover:bg-blue-200 transition-colors">
+										<contact.icon className="w-6 h-6 text-blue-600" />
 									</div>
-								))}
-							</div>
+									<h3 className="text-lg font-semibold text-gray-900 mb-2">
+										{contact.label}
+									</h3>
+									<p className="text-gray-600 text-center group-hover:text-blue-600 transition-colors">
+										{contact.value}
+									</p>
+								</a>
+							))}
+						</div>
 
-							{/* Consent Checkbox */}
-							<div className="flex items-center space-x-3 animate-fade-in-up" style={{ animationDelay: '600ms' }}>
-								<input
-									type="checkbox"
-									id="consent"
-									checked={isConsentChecked}
-									onChange={(e) => setIsConsentChecked(e.target.checked)}
-									className="h-5 w-5 rounded border-gray-300 text-blue-600 focus:ring-blue-500 transition-colors"
-									required
-								/>
-								<label htmlFor="consent" className="text-sm text-gray-600">
-									<span className="text-red-500">*</span> I consent to receive info about services from Call Eagle Digital.
-								</label>
-							</div>
-
-							<button
-								type="submit"
-								disabled={isSubmitting}
-								className={`w-full ${isSubmitting
-									? 'bg-gray-400 cursor-not-allowed'
-									: 'bg-gradient-to-r from-blue-600 to-purple-600 hover:translate-y-[-2px] shadow-lg hover:shadow-xl'
-									} text-white py-4 rounded-full font-semibold transform transition-all duration-300 animate-fade-in-up`}
-								style={{ animationDelay: '700ms' }}
-							>
-								<span className="flex items-center justify-center gap-2">
-									{isSubmitting ? 'Submitting...' : 'Submit'}
-									{!isSubmitting && (
-										<svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-											<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-										</svg>
-									)}
-								</span>
-							</button>
-						</form>
+						<div className="mt-12 pt-12 border-t border-gray-100">
+							<p className="text-center text-gray-500">
+								Business hours: Monday - Friday, 9:00 AM - 6:00 PM
+							</p>
+						</div>
 					</div>
 				</div>
 			</div>
 		</section>
-	)
+	);
 } 
