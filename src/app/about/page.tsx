@@ -104,7 +104,7 @@ export default function AboutPage() {
 				</section>
 
 				{/* Our Mission Section */}
-				<section className="py-20 bg-white">
+				<section id="story" className="py-20 bg-white">
 					<div className="container mx-auto px-4">
 						<div className="max-w-4xl mx-auto">
 							<h2 className="text-4xl md:text-5xl font-bold text-center mb-12 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
@@ -126,7 +126,7 @@ export default function AboutPage() {
 				</section>
 
 				{/* Team Section */}
-				<section className="py-20 bg-gray-50">
+				<section id="team" className="py-20 bg-gray-50">
 					<div className="container mx-auto px-4">
 						<div className="text-center mb-16">
 							<h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
@@ -203,7 +203,7 @@ export default function AboutPage() {
 				</section>
 
 				{/* CTA Section */}
-				<section className="py-20 bg-white">
+				<section id="careers" className="py-20 bg-white">
 					<div className="container mx-auto px-4 text-center">
 						<div className="max-w-3xl mx-auto">
 							<h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">

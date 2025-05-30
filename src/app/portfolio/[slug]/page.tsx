@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
+import Image from 'next/image';
 
 interface PageProps {
 	params: Promise<{
@@ -26,7 +27,7 @@ export default async function CaseStudyPage({ params }: PageProps) {
 			company: "Home Wizards",
 			industry: "Home Services",
 			result: "+150% leads in 2 months",
-			logo: "🏠",
+			logo: "/images/clients/homewizards.png",
 			challenge: "Low online visibility and minimal lead generation from digital channels",
 			solution: "Complete Yelp profile optimization with targeted advertising campaigns",
 			results: [
@@ -40,7 +41,7 @@ export default async function CaseStudyPage({ params }: PageProps) {
 			company: "AtticPros",
 			industry: "Attic Cleaning Services",
 			result: "4.9 rating after Yelp revamp",
-			logo: "🏘️",
+			logo: "/images/clients/atticpros.png",
 			challenge: "Outdated Yelp profile with poor rating and limited customer engagement",
 			solution: "Profile restructuring and comprehensive review management strategy",
 			results: [
@@ -51,10 +52,10 @@ export default async function CaseStudyPage({ params }: PageProps) {
 			]
 		},
 		"hvac-services": {
-			company: "HVAC Services",
+			company: "HVAC Panda",
 			industry: "HVAC Repair & Installation",
 			result: "$2M+ revenue via Yelp Ads",
-			logo: "❄️",
+			logo: "/images/clients/hvacpanda.png",
 			challenge: "Seasonal business fluctuations and high competition in local market",
 			solution: "Strategic advertising campaign with advanced conversion optimization",
 			results: [
@@ -64,46 +65,74 @@ export default async function CaseStudyPage({ params }: PageProps) {
 				"Year-round consistent lead flow"
 			]
 		},
-		"green-landscaping": {
-			company: "Green Landscaping",
-			industry: "Landscaping Services",
-			result: "300% increase in bookings",
-			logo: "🌿",
-			challenge: "Seasonal demand challenges and limited online presence",
-			solution: "Local SEO optimization and Google Local Services setup",
+		"advance-hvac": {
+			company: "Advance HVAC",
+			industry: "HVAC Services",
+			result: "40% service area growth",
+			logo: "/images/clients/advancehvac.png",
+			challenge: "Operating in a competitive market across multiple Bay Area counties required strategic approach to stand out and maintain strong online presence",
+			solution: "Comprehensive Yelp profile optimization and review management strategy across all service areas",
 			results: [
-				"300% increase in service bookings",
-				"Top 3 ranking for local keywords",
-				"150% growth in organic traffic",
-				"80% improvement in phone inquiries"
+				"40% expansion in service coverage",
+				"4.9-star rating with 115+ reviews",
+				"Operating in 7 Bay Area counties",
+				"Consistent lead flow across all locations"
 			]
 		},
-		"premier-plumbing": {
-			company: "Premier Plumbing",
-			industry: "Plumbing Services",
-			result: "85% conversion rate improvement",
-			logo: "🔧",
-			challenge: "Poor website conversion and ineffective PPC campaigns",
-			solution: "Landing page optimization and strategic PPC campaign management",
+		"rhino-fencing": {
+			company: "Rhino Fencing",
+			industry: "Fencing Services",
+			result: "250% increase in consultations",
+			logo: "/images/clients/rhinofencing.png",
+			challenge: "New fencing company needed to establish strong market presence and generate qualified leads in the competitive Bay Area market",
+			solution: "Comprehensive digital presence setup with focus on lead generation and service area optimization",
 			results: [
-				"85% conversion rate improvement",
-				"60% reduction in cost per acquisition",
-				"250% increase in form submissions",
-				"40% improvement in call quality"
+				"250% increase in consultation bookings",
+				"Established presence in entire Bay Area",
+				"Automated lead response system implementation",
+				"Top rankings for local fencing keywords"
 			]
 		},
-		"elite-cleaning": {
-			company: "Elite Cleaning",
-			industry: "Commercial Cleaning",
-			result: "200% ROI in first quarter",
-			logo: "✨",
-			challenge: "Limited lead generation and manual response processes",
-			solution: "Multi-platform advertising with AI-powered lead response system",
+		"crawlclean": {
+			company: "CrawlClean",
+			industry: "Home Services",
+			result: "800+ 5-star reviews",
+			logo: "/images/clients/crawlclean.png",
+			challenge: "Needed to establish trust and credibility in a highly competitive market while scaling operations across multiple locations",
+			solution: "Comprehensive digital presence optimization with focus on review generation and management system implementation",
 			results: [
-				"200% ROI in first quarter",
-				"90% faster lead response time",
-				"175% increase in qualified leads",
-				"50% improvement in customer retention"
+				"Generated over 800 verified 5-star reviews",
+				"Expanded to 5 new service locations",
+				"35% increase in average ticket value",
+				"90% improvement in customer response time"
+			]
+		},
+		"phoenix-restoration": {
+			company: "Phoenix Restoration",
+			industry: "Restoration Services",
+			result: "98% customer satisfaction",
+			logo: "/images/clients/phoenix.png",
+			challenge: "Needed to establish market leadership in the competitive Bay Area restoration industry while expanding service coverage across multiple counties",
+			solution: "Implemented comprehensive digital marketing strategy with focus on service area optimization and customer satisfaction tracking",
+			results: [
+				"98% customer satisfaction score achieved",
+				"Expanded to serve 8 Bay Area counties",
+				"100% health and safety compliance rate",
+				"87% improvement in project completion efficiency"
+			]
+		},
+		"insulation-panda": {
+			company: "Insulation Panda",
+			industry: "Insulation Services",
+			result: "#1 trusted contractor",
+			logo: "/images/clients/insulationpanda.png",
+			challenge: "Required comprehensive digital presence establishment and service area expansion across the entire Bay Area while building trust as a leading insulation contractor",
+			solution: "Implemented full-scale digital marketing strategy with focus on service differentiation and geographic expansion",
+			results: [
+				"Achieved Diamond Certified status",
+				"Expanded to serve 7 Bay Area counties",
+				"Ranked #1 trusted contractor on multiple platforms",
+				"100% transparent pricing implementation"
 			]
 		}
 	};
@@ -117,20 +146,43 @@ export default async function CaseStudyPage({ params }: PageProps) {
 	return (
 		<div className="min-h-screen">
 			{/* Hero Section */}
-			<section className="bg-gradient-to-r from-blue-600 via-blue-700 to-purple-700 py-20">
-				<div className="container mx-auto px-4">
-					<div className="max-w-4xl mx-auto text-center">
-						<div className="text-8xl mb-6">
-							{caseStudy.logo}
-						</div>
-						<h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-							{caseStudy.company}
-						</h1>
-						<p className="text-xl text-blue-100 mb-4">
-							{caseStudy.industry}
-						</p>
-						<div className="text-2xl md:text-3xl font-bold text-yellow-400">
-							{caseStudy.result}
+			<section className="bg-gradient-to-r from-blue-600 via-blue-700 to-purple-700 py-20 relative overflow-hidden">
+				{/* Decorative background elements */}
+				<div className="absolute inset-0 bg-black/10" />
+				<div className="absolute inset-0">
+					<div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-black/20 to-transparent" />
+					<div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-black/20 to-transparent" />
+				</div>
+
+				<div className="container mx-auto px-4 relative">
+					<div className="max-w-4xl mx-auto">
+						{/* Logo and Title Container */}
+						<div className="bg-white/95 backdrop-blur-sm rounded-3xl p-8 md:p-16 shadow-2xl transform hover:scale-[1.02] transition-all duration-300">
+							{caseStudy.logo.startsWith('/') && (
+								<div className="flex justify-center mb-10">
+									<Image
+										src={caseStudy.logo}
+										alt={caseStudy.company}
+										width={160}
+										height={160}
+										className="object-contain"
+									/>
+								</div>
+							)}
+							
+							<div className="text-center">
+								<h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-6">
+									{caseStudy.company}
+								</h1>
+								<p className="text-xl text-gray-600 mb-8">
+									{caseStudy.industry}
+								</p>
+								<div className="inline-block bg-gradient-to-r from-blue-600 to-purple-600 rounded-full px-8 py-3">
+									<span className="text-2xl md:text-3xl font-bold text-white">
+										{caseStudy.result}
+									</span>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>

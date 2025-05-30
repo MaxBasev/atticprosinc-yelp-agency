@@ -12,3 +12,11 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+h1 {
+  padding-bottom: 6px;
+}
+
+h2 {
+  padding-bottom: 6px;
+}

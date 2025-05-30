@@ -37,9 +37,6 @@ export default function Header() {
 						<Link href="/portfolio" className="text-gray-700 hover:text-blue-600 transition-colors">
 							Portfolio
 						</Link>
-						<Link href="/blog" className="text-gray-700 hover:text-blue-600 transition-colors">
-							Blog
-						</Link>
 						<Link href="/#contact" className="text-gray-700 hover:text-blue-600 transition-colors">
 							Contact
 						</Link>
@@ -81,9 +78,6 @@ export default function Header() {
 							</Link>
 							<Link href="/portfolio" className="text-gray-700 hover:text-blue-600 transition-colors py-2">
 								Portfolio
-							</Link>
-							<Link href="/blog" className="text-gray-700 hover:text-blue-600 transition-colors py-2">
-								Blog
 							</Link>
 							<Link href="/#contact" className="text-gray-700 hover:text-blue-600 transition-colors py-2">
 								Contact

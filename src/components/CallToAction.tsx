@@ -2,16 +2,18 @@ import Image from 'next/image';
 
 export default function CallToAction() {
 	return (
-		<section className="py-16 relative overflow-hidden">
+		<section className="py-24 relative overflow-hidden">
 			{/* Background image */}
 			<div className="absolute inset-0">
-				<Image
-					src="/images/services-bg.jpg"
-					alt="Background"
-					layout="fill"
-					objectFit="cover"
-					className="opacity-10"
-				/>
+				<div className="relative w-full h-full">
+					<Image
+						src="/images/services-bg.jpg"
+						alt="Background"
+						fill
+						className="opacity-10 object-cover"
+						priority
+					/>
+				</div>
 			</div>
 
 			{/* Gradient overlay */}
@@ -29,10 +31,10 @@ export default function CallToAction() {
 							className="opacity-80"
 						/>
 					</div>
-					<h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-						Your Ideal Clients Are Searching for You
+					<h2 className="text-5xl md:text-6xl font-bold text-white mb-6">
+						Your Ideal Clients Are&nbsp;Searching for You
 					</h2>
-					<p className="text-blue-100 text-lg md:text-xl mb-12">
+					<p className="text-blue-100 text-xl md:text-2xl mb-12">
 						Make sure they find you. Let Call Eagle Digital turn your local listing into a conversion machine.
 					</p>
 					<button className="bg-white text-blue-600 px-8 py-4 rounded-full font-semibold hover:bg-blue-50 transition-all transform hover:scale-105 hover:-translate-y-1 shadow-lg hover:shadow-xl">

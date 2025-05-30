@@ -16,32 +16,24 @@ export default function Footer() {
 					<h3 className="text-2xl font-bold text-white">Call Eagle Digital</h3>
 				</div>
 
-				<div className="grid grid-cols-2 md:grid-cols-5 gap-8 mb-12">
-					<div className="col-span-2 md:col-span-1">
+				<div className="flex flex-wrap -mx-4 mb-12">
+					<div className="w-full md:w-1/4 px-4 mb-8 md:mb-0">
 						<h3 className="text-xl font-semibold mb-4">About Us</h3>
 						<ul className="space-y-2">
-							<li><Link href="/about" className="text-gray-400 hover:text-white transition-colors">Our Story</Link></li>
-							<li><Link href="/about" className="text-gray-400 hover:text-white transition-colors">Team</Link></li>
-							<li><Link href="/about" className="text-gray-400 hover:text-white transition-colors">Careers</Link></li>
+							<li><Link href="/about#story" className="text-gray-400 hover:text-white transition-colors">Our Story</Link></li>
+							<li><Link href="/about#team" className="text-gray-400 hover:text-white transition-colors">Team</Link></li>
+							<li><Link href="/about#careers" className="text-gray-400 hover:text-white transition-colors">Careers</Link></li>
 						</ul>
 					</div>
-					<div className="col-span-2 md:col-span-1">
+					<div className="w-full md:w-1/4 px-4 mb-8 md:mb-0">
 						<h3 className="text-xl font-semibold mb-4">Services</h3>
 						<ul className="space-y-2">
-							<li><Link href="/services" className="text-gray-400 hover:text-white transition-colors">Autoresponders</Link></li>
-							<li><Link href="/services" className="text-gray-400 hover:text-white transition-colors">Virtual Assistants</Link></li>
-							<li><Link href="/services" className="text-gray-400 hover:text-white transition-colors">Local Listings</Link></li>
+							<li><Link href="/services#autoresponders" className="text-gray-400 hover:text-white transition-colors">Autoresponders</Link></li>
+							<li><Link href="/services#virtual-assistants" className="text-gray-400 hover:text-white transition-colors">Virtual Assistants</Link></li>
+							<li><Link href="/services#local-listings" className="text-gray-400 hover:text-white transition-colors">Local Listings</Link></li>
 						</ul>
 					</div>
-					<div className="col-span-2 md:col-span-1">
-						<h3 className="text-xl font-semibold mb-4">Resources</h3>
-						<ul className="space-y-2">
-							<li><Link href="/blog" className="text-gray-400 hover:text-white transition-colors">Blog</Link></li>
-							<li><Link href="/blog" className="text-gray-400 hover:text-white transition-colors">Guides</Link></li>
-							<li><Link href="/blog" className="text-gray-400 hover:text-white transition-colors">FAQ</Link></li>
-						</ul>
-					</div>
-					<div className="col-span-2 md:col-span-1">
+					<div className="w-full md:w-1/3 px-4 mb-8 md:mb-0">
 						<h3 className="text-xl font-semibold mb-4">Contact</h3>
 						<ul className="space-y-2">
 							<li className="text-gray-400">
@@ -55,7 +47,7 @@ export default function Footer() {
 							</li>
 						</ul>
 					</div>
-					<div className="col-span-2 md:col-span-1">
+					<div className="w-full md:w-1/6 px-4">
 						<h3 className="text-xl font-semibold mb-4">Legal & Privacy</h3>
 						<ul className="space-y-2">
 							<li><Link href="/terms" className="text-gray-400 hover:text-white transition-colors">Terms</Link></li>
@@ -76,4 +68,4 @@ export default function Footer() {
 			</div>
 		</footer>
 	);
-} 
+} 	

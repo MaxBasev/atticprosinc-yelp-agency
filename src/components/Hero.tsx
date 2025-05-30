@@ -30,9 +30,12 @@ export default function Hero() {
 					</h1>
 
 					{/* Yelp Partnership Notice */}
-					<p className="text-sm text-white/80 mt-2">
-						Soon to be an official Yelp Advertising Partner — stay tuned!
-					</p>
+					<div className="inline-block mb-8 bg-emerald-600/90 backdrop-blur-sm border-2 border-emerald-400 rounded-full px-8 py-3">
+						<p className="text-base md:text-lg text-white font-semibold flex items-center">
+							<span className="w-3 h-3 bg-yellow-400 rounded-full mr-3 animate-pulse"></span>
+							Soon to be an official Yelp Advertising Partner — stay tuned!
+						</p>
+					</div>
 
 					{/* Subheadline */}
 					<p className="text-lg sm:text-xl md:text-2xl mb-8 sm:mb-12 text-blue-100 leading-relaxed opacity-90 animate-slide-up max-w-3xl mx-auto">

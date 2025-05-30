@@ -49,13 +49,13 @@ export default function ContactForm() {
 								{[
 									{ name: 'name', type: 'text', placeholder: 'Name', icon: 'user', required: true },
 									{ name: 'phone', type: 'tel', placeholder: 'Phone', icon: 'phone', required: true },
-									{ name: 'email', type: 'email', placeholder: 'Email', icon: 'mail', required: true },
+									{ name: 'email', type: 'email', placeholder: 'Email', icon: 'envelope', required: true },
 									{ name: 'city', type: 'text', placeholder: 'City', icon: 'map', required: false },
 									{ name: 'company', type: 'text', placeholder: 'Company', icon: 'building', required: false },
 									{ name: 'website', type: 'url', placeholder: 'Website', icon: 'globe', required: false },
 								].map((field, index) => (
 									<div key={field.name} className="relative group animate-fade-in-up" style={{ animationDelay: `${index * 100}ms` }}>
-										<div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-gray-400 group-focus-within:text-blue-600 transition-colors">
+										<div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-gray-400 group-focus-within:text-blue-600 transition-colors">
 											<i className={`fas fa-${field.icon}`}></i>
 										</div>
 										<input
@@ -63,20 +63,20 @@ export default function ContactForm() {
 											name={field.name}
 											placeholder={field.placeholder}
 											required={field.required}
-											className="w-full pl-12 pr-4 py-3 rounded-lg border border-gray-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all outline-none"
+											className="w-full pl-10 pr-4 py-3 rounded-lg border border-gray-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all outline-none"
 										/>
 									</div>
 								))}
 							</div>
 
 							{/* Consent Checkbox */}
-							<div className="flex items-start space-x-3 animate-fade-in-up" style={{ animationDelay: '600ms' }}>
+							<div className="flex items-center space-x-3 animate-fade-in-up" style={{ animationDelay: '600ms' }}>
 								<input
 									type="checkbox"
 									id="consent"
 									checked={isConsentChecked}
 									onChange={(e) => setIsConsentChecked(e.target.checked)}
-									className="mt-1 h-5 w-5 rounded border-gray-300 text-blue-600 focus:ring-blue-500 transition-colors"
+									className="h-5 w-5 rounded border-gray-300 text-blue-600 focus:ring-blue-500 transition-colors"
 									required
 								/>
 								<label htmlFor="consent" className="text-sm text-gray-600">
@@ -89,8 +89,8 @@ export default function ContactForm() {
 								disabled={isSubmitting}
 								className={`w-full ${isSubmitting
 									? 'bg-gray-400 cursor-not-allowed'
-									: 'bg-gradient-to-r from-blue-600 to-purple-600 hover:translate-y-[-2px] hover:shadow-lg'
-									} text-white py-4 rounded-lg font-semibold transform transition-all duration-300 animate-fade-in-up`}
+									: 'bg-gradient-to-r from-blue-600 to-purple-600 hover:translate-y-[-2px] shadow-lg hover:shadow-xl'
+									} text-white py-4 rounded-full font-semibold transform transition-all duration-300 animate-fade-in-up`}
 								style={{ animationDelay: '700ms' }}
 							>
 								<span className="flex items-center justify-center gap-2">

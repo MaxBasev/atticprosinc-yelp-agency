@@ -47,22 +47,34 @@ export default function sitemap(): MetadataRoute.Sitemap {
 			priority: 0.6,
 		},
 		{
-			url: `${baseUrl}/portfolio/green-landscaping`,
+			url: `${baseUrl}/portfolio/advance-hvac`,
 			lastModified: new Date(),
 			changeFrequency: 'monthly',
 			priority: 0.6,
 		},
 		{
-			url: `${baseUrl}/portfolio/premier-plumbing`,
+			url: `${baseUrl}/portfolio/rhino-fencing`,
 			lastModified: new Date(),
 			changeFrequency: 'monthly',
 			priority: 0.6,
 		},
 		{
-			url: `${baseUrl}/portfolio/elite-cleaning`,
+			url: `${baseUrl}/portfolio/crawlclean`,
 			lastModified: new Date(),
 			changeFrequency: 'monthly',
 			priority: 0.6,
 		},
+		{
+			url: `${baseUrl}/portfolio/phoenix-restoration`,
+			lastModified: new Date(),
+			changeFrequency: 'monthly',
+			priority: 0.6,
+		},
+		{
+			url: `${baseUrl}/portfolio/insulation-panda`,
+			lastModified: new Date(),
+			changeFrequency: 'monthly',
+			priority: 0.6,
+		}
 	]
 } 

@@ -67,7 +67,12 @@ export default function ServicesPage() {
 			title: "Yelp Ads Management",
 			icon: "🎯",
 			oneLiner: "Strategic advertising campaigns that deliver qualified local leads",
-			description: "Expert management of your Yelp advertising campaigns with advanced targeting, budget optimization, and performance tracking. Our data-driven approach ensures maximum ROI while reaching customers actively searching for your services in your local area. We work with businesses ready to invest $10,000+ per month in Yelp advertising to meet program requirements and achieve significant results."
+			description: (
+				<>
+					Expert management of your Yelp advertising campaigns with advanced targeting, budget optimization, and performance tracking. Our data-driven approach ensures maximum ROI while reaching customers actively searching for your services in your local area.{" "}
+					We work with businesses ready to invest <span className="bg-gradient-to-r from-blue-600 via-blue-700 to-purple-700 text-white px-2 py-0.5 shadow-sm rounded-md" style={{ whiteSpace: 'nowrap' }}>$10,000+ per month</span> to meet program requirements and achieve significant results.
+				</>
+			)
 		},
 		{
 			title: "SEO (Local & Technical)",
@@ -97,7 +102,22 @@ export default function ServicesPage() {
 			title: "AI-Powered Lead Response",
 			icon: "⚡",
 			oneLiner: "Instant lead response system that builds trust and secures appointments",
-			description: "When potential clients reach out, response speed is crucial. Our advanced autoresponder delivers fast, personalized replies — building trust, showing professionalism, and securing more appointments. Never miss another opportunity with our 24/7 automated lead nurturing system."
+			description: "When potential clients reach out, response speed is crucial. Our advanced autoresponder delivers fast, personalized replies — building trust, showing professionalism, and securing more appointments. Never miss another opportunity with our 24/7 automated lead nurturing system.",
+			id: "autoresponders"
+		},
+		{
+			title: "Virtual Assistant Services",
+			icon: "👥",
+			oneLiner: "Dedicated virtual assistants to handle your business tasks",
+			description: "Professional virtual assistants trained to manage your day-to-day business operations, customer service, and administrative tasks. Free up your time to focus on growing your business while we handle the details.",
+			id: "virtual-assistants"
+		},
+		{
+			title: "Local Listing Management",
+			icon: "📍",
+			oneLiner: "Comprehensive local business listing management",
+			description: "Complete management of your business listings across all major platforms. We ensure your business information is accurate, consistent, and optimized for local search across Google, Bing, and other directories.",
+			id: "local-listings"
 		}
 	];
 
@@ -159,6 +179,7 @@ export default function ServicesPage() {
 							{services.map((service, index) => (
 								<div
 									key={index}
+									id={service.id}
 									className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 group border border-gray-100 hover:border-blue-200"
 								>
 									{/* Icon */}

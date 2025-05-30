@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function PortfolioPage() {
 	const portfolioItems = [
@@ -6,7 +7,7 @@ export default function PortfolioPage() {
 			slug: "home-wizards",
 			company: "Home Wizards",
 			result: "+150% leads in 2 months",
-			logo: "🏠",
+			logo: "/images/clients/homewizards.png",
 			industry: "Home Services",
 			description: "Complete Yelp profile optimization and targeted ad campaigns"
 		},
@@ -14,41 +15,57 @@ export default function PortfolioPage() {
 			slug: "atticpros",
 			company: "AtticPros",
 			result: "4.9 rating after Yelp revamp",
-			logo: "🏘️",
+			logo: "/images/clients/atticpros.png",
 			industry: "Attic Cleaning",
 			description: "Profile restructuring and review management strategy"
 		},
 		{
 			slug: "hvac-services",
-			company: "HVAC Services",
+			company: "HVAC Panda",
 			result: "$2M+ revenue via Yelp Ads",
-			logo: "❄️",
+			logo: "/images/clients/hvacpanda.png",
 			industry: "HVAC",
 			description: "Strategic advertising campaign with conversion optimization"
 		},
 		{
-			slug: "green-landscaping",
-			company: "Green Landscaping",
-			result: "300% increase in bookings",
-			logo: "🌿",
-			industry: "Landscaping",
-			description: "Local SEO and Google Local Services setup"
+			slug: "advance-hvac",
+			company: "Advance HVAC",
+			result: "40% service area growth",
+			logo: "/images/clients/advancehvac.png",
+			industry: "HVAC Services",
+			description: "Multi-county Yelp optimization and review management"
 		},
 		{
-			slug: "premier-plumbing",
-			company: "Premier Plumbing",
-			result: "85% conversion rate improvement",
-			logo: "🔧",
-			industry: "Plumbing",
-			description: "Landing page optimization and PPC campaign management"
+			slug: "rhino-fencing",
+			company: "Rhino Fencing",
+			result: "250% increase in consultations",
+			logo: "/images/clients/rhinofencing.png",
+			industry: "Fencing Services",
+			description: "Digital presence optimization and lead generation system"
 		},
 		{
-			slug: "elite-cleaning",
-			company: "Elite Cleaning",
-			result: "200% ROI in first quarter",
-			logo: "✨",
-			industry: "Cleaning Services",
-			description: "Multi-platform advertising strategy with AI lead response"
+			slug: "crawlclean",
+			company: "CrawlClean",
+			result: "800+ 5-star reviews",
+			logo: "/images/clients/crawlclean.png",
+			industry: "Home Services",
+			description: "Complete digital presence and lead generation system"
+		},
+		{
+			slug: "phoenix-restoration",
+			company: "Phoenix Restoration",
+			result: "98% customer satisfaction",
+			logo: "/images/clients/phoenix.png",
+			industry: "Restoration Services",
+			description: "Comprehensive digital marketing and lead generation strategy"
+		},
+		{
+			slug: "insulation-panda",
+			company: "Insulation Panda",
+			result: "#1 trusted contractor",
+			logo: "/images/clients/insulationpanda.png",
+			industry: "Insulation Services",
+			description: "Complete digital presence and service area expansion strategy"
 		}
 	];
 
@@ -86,9 +103,17 @@ export default function PortfolioPage() {
 								className="group bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 border border-gray-100 hover:border-blue-200 transform hover:-translate-y-2"
 							>
 								{/* Company Logo */}
-								<div className="text-6xl mb-6 text-center transform group-hover:scale-110 transition-transform duration-300">
-									{item.logo}
-								</div>
+								{item.logo.startsWith('/') && (
+									<div className="mb-6 text-center transform group-hover:scale-110 transition-transform duration-300 relative h-24">
+										<Image
+											src={item.logo}
+											alt={item.company}
+											fill
+											sizes="(max-width: 768px) 100vw, 240px"
+											className="object-contain"
+										/>
+									</div>
+								)}
 
 								{/* Company Name */}
 								<h3 className="text-2xl font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors duration-300">
@@ -133,7 +158,7 @@ export default function PortfolioPage() {
 				<div className="container mx-auto px-4 text-center">
 					<div className="max-w-3xl mx-auto">
 						<h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-							Ready to Be Our Next Success Story?
+							Ready to Be Our Next Success&nbsp;Story?
 						</h2>
 						<p className="text-gray-600 text-lg mb-12 leading-relaxed">
 							Join the growing list of businesses that have transformed their online presence and achieved remarkable growth with Call Eagle Digital.

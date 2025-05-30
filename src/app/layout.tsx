@@ -3,9 +3,37 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
-import Script from "next/script";
 
 const inter = Inter({ subsets: ["latin"] });
+
+const organizationSchema = {
+	"@context": "https://schema.org",
+	"@type": "Organization",
+	"name": "Call Eagle Digital",
+	"url": "https://calleagledigital.com",
+	"sameAs": ["https://www.yelp.com/biz/call-eagle-digital"],
+	"contactPoint": {
+		"@type": "ContactPoint",
+		"telephone": "+1-415-555-0123",
+		"contactType": "customer service",
+		"email": "hello@calleagledigital.com",
+		"areaServed": "US",
+		"availableLanguage": "English"
+	},
+	"address": {
+		"@type": "PostalAddress",
+		"streetAddress": "548 Market St",
+		"addressLocality": "San Francisco",
+		"addressRegion": "CA",
+		"addressCountry": "US"
+	},
+	"description": "Digital marketing agency specializing in Yelp optimization, local SEO, and lead generation for local businesses.",
+	"foundingDate": "2018",
+	"serviceArea": {
+		"@type": "Country",
+		"name": "United States"
+	}
+};
 
 export const metadata: Metadata = {
 	title: "Call Eagle Digital | Business Visibility Agency",
@@ -51,34 +79,8 @@ export const metadata: Metadata = {
 	verification: {
 		google: "your-google-verification-code",
 	},
-};
-
-const organizationSchema = {
-	"@context": "https://schema.org",
-	"@type": "Organization",
-	"name": "Call Eagle Digital",
-	"url": "https://calleagledigital.com",
-	"sameAs": ["https://www.yelp.com/biz/call-eagle-digital"],
-	"contactPoint": {
-		"@type": "ContactPoint",
-		"telephone": "+1-415-555-0123",
-		"contactType": "customer service",
-		"email": "hello@calleagledigital.com",
-		"areaServed": "US",
-		"availableLanguage": "English"
-	},
-	"address": {
-		"@type": "PostalAddress",
-		"streetAddress": "548 Market St",
-		"addressLocality": "San Francisco",
-		"addressRegion": "CA",
-		"addressCountry": "US"
-	},
-	"description": "Digital marketing agency specializing in Yelp optimization, local SEO, and lead generation for local businesses.",
-	"foundingDate": "2018",
-	"serviceArea": {
-		"@type": "Country",
-		"name": "United States"
+	other: {
+		'application-ld+json': JSON.stringify(organizationSchema)
 	}
 };
 
@@ -89,16 +91,18 @@ export default function RootLayout({
 }) {
 	return (
 		<html lang="en">
-			<body className={inter.className}>
-				<Script
-					id="organization-schema"
-					type="application/ld+json"
-					dangerouslySetInnerHTML={{
-						__html: JSON.stringify(organizationSchema),
-					}}
+			<head>
+				<link 
+					rel="stylesheet" 
+					href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" 
+					integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" 
+					crossOrigin="anonymous" 
+					referrerPolicy="no-referrer" 
 				/>
+			</head>
+			<body className={inter.className}>
 				<Header />
-				<main className="pt-20">
+				<main className="pt-[72px]">
 					{children}
 				</main>
 				<Footer />
